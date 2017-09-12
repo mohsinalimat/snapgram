@@ -13,6 +13,8 @@
 		18BB96F21F67FE1900AE9FF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18BB96F11F67FE1900AE9FF3 /* Assets.xcassets */; };
 		18BB96F51F67FE1900AE9FF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BB96F31F67FE1900AE9FF3 /* LaunchScreen.storyboard */; };
 		18BB97001F67FE1900AE9FF3 /* SnapgramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB96FF1F67FE1900AE9FF3 /* SnapgramTests.swift */; };
+		4F6DCE73FCF94FB82E1E451D /* Pods_SnapgramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EFCAC1B2428B4065F6E6C3F /* Pods_SnapgramTests.framework */; };
+		D838C552DCB8CA87743AEFF4 /* Pods_Snapgram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39C874793808517245DCA658 /* Pods_Snapgram.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,12 @@
 		18BB96FB1F67FE1900AE9FF3 /* SnapgramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapgramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18BB96FF1F67FE1900AE9FF3 /* SnapgramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapgramTests.swift; sourceTree = "<group>"; };
 		18BB97011F67FE1900AE9FF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39C874793808517245DCA658 /* Pods_Snapgram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snapgram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42647E4173D0555C8E1B0C97 /* Pods-Snapgram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapgram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Snapgram/Pods-Snapgram.debug.xcconfig"; sourceTree = "<group>"; };
+		7EFCAC1B2428B4065F6E6C3F /* Pods_SnapgramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapgramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9554D0E141A0E72081927D72 /* Pods-SnapgramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapgramTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapgramTests/Pods-SnapgramTests.release.xcconfig"; sourceTree = "<group>"; };
+		959B75C185A5AE820D9A02D4 /* Pods-Snapgram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapgram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Snapgram/Pods-Snapgram.release.xcconfig"; sourceTree = "<group>"; };
+		AE93D6FD599C9F7D95DA1491 /* Pods-SnapgramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapgramTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapgramTests/Pods-SnapgramTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D838C552DCB8CA87743AEFF4 /* Pods_Snapgram.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F6DCE73FCF94FB82E1E451D /* Pods_SnapgramTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +72,8 @@
 				18BB96E91F67FE1900AE9FF3 /* Snapgram */,
 				18BB96FE1F67FE1900AE9FF3 /* SnapgramTests */,
 				18BB96E81F67FE1900AE9FF3 /* Products */,
+				48DB796AB925FF0CE4683643 /* Pods */,
+				C94E2374D1B5D55D7671596E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +108,26 @@
 			path = SnapgramTests;
 			sourceTree = "<group>";
 		};
+		48DB796AB925FF0CE4683643 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				42647E4173D0555C8E1B0C97 /* Pods-Snapgram.debug.xcconfig */,
+				959B75C185A5AE820D9A02D4 /* Pods-Snapgram.release.xcconfig */,
+				AE93D6FD599C9F7D95DA1491 /* Pods-SnapgramTests.debug.xcconfig */,
+				9554D0E141A0E72081927D72 /* Pods-SnapgramTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C94E2374D1B5D55D7671596E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				39C874793808517245DCA658 /* Pods_Snapgram.framework */,
+				7EFCAC1B2428B4065F6E6C3F /* Pods_SnapgramTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +135,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18BB97041F67FE1900AE9FF3 /* Build configuration list for PBXNativeTarget "Snapgram" */;
 			buildPhases = (
+				30E0A990FE451D4CD364EAF4 /* [CP] Check Pods Manifest.lock */,
 				18BB96E31F67FE1900AE9FF3 /* Sources */,
 				18BB96E41F67FE1900AE9FF3 /* Frameworks */,
 				18BB96E51F67FE1900AE9FF3 /* Resources */,
+				5FA8A06F506D351EC62A3633 /* [CP] Embed Pods Frameworks */,
+				5E1AB773648D22279B913F02 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18BB97071F67FE1900AE9FF3 /* Build configuration list for PBXNativeTarget "SnapgramTests" */;
 			buildPhases = (
+				5E03BC5A1029BF7FF2D181D8 /* [CP] Check Pods Manifest.lock */,
 				18BB96F71F67FE1900AE9FF3 /* Sources */,
 				18BB96F81F67FE1900AE9FF3 /* Frameworks */,
 				18BB96F91F67FE1900AE9FF3 /* Resources */,
+				BF1EC0EDA8E377031C19B279 /* [CP] Embed Pods Frameworks */,
+				C143C6153BBA2F9748F0C87F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -191,6 +229,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		30E0A990FE451D4CD364EAF4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5E03BC5A1029BF7FF2D181D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5E1AB773648D22279B913F02 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Snapgram/Pods-Snapgram-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FA8A06F506D351EC62A3633 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Snapgram/Pods-Snapgram-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF1EC0EDA8E377031C19B279 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapgramTests/Pods-SnapgramTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C143C6153BBA2F9748F0C87F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapgramTests/Pods-SnapgramTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18BB96E31F67FE1900AE9FF3 /* Sources */ = {
@@ -349,6 +480,7 @@
 		};
 		18BB97051F67FE1900AE9FF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42647E4173D0555C8E1B0C97 /* Pods-Snapgram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ELTTE7K8TT;
@@ -363,6 +495,7 @@
 		};
 		18BB97061F67FE1900AE9FF3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 959B75C185A5AE820D9A02D4 /* Pods-Snapgram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ELTTE7K8TT;
@@ -377,6 +510,7 @@
 		};
 		18BB97081F67FE1900AE9FF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE93D6FD599C9F7D95DA1491 /* Pods-SnapgramTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -393,6 +527,7 @@
 		};
 		18BB97091F67FE1900AE9FF3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9554D0E141A0E72081927D72 /* Pods-SnapgramTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

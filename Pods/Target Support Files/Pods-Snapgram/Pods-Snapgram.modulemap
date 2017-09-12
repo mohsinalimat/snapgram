@@ -1,0 +1,6 @@
+framework module Pods_Snapgram {
+  umbrella header "Pods-Snapgram-umbrella.h"
+
+  export *
+  module * { export * }
+}

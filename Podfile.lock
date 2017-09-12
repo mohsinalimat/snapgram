@@ -1,0 +1,18 @@
+PODS:
+  - Nimble (7.0.1)
+  - Quick (1.1.0)
+  - SnapKit (3.2.0)
+
+DEPENDENCIES:
+  - Nimble
+  - Quick
+  - SnapKit
+
+SPEC CHECKSUMS:
+  Nimble: 657d000e11df8aebe27cdaf9d244de7f30ed87f7
+  Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+
+PODFILE CHECKSUM: 4d19e3503d2ab339236bb8ebe42097de5127ce15
+
+COCOAPODS: 1.2.1
