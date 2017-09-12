@@ -6,7 +6,6 @@ target 'Snapgram' do
   use_frameworks!
 
   # Pods for Snapgram
-  pod 'SnapKit'
 
   target 'SnapgramTests' do
     inherit! :search_paths

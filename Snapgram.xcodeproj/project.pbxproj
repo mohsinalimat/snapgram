@@ -13,6 +13,7 @@
 		18BB96F21F67FE1900AE9FF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18BB96F11F67FE1900AE9FF3 /* Assets.xcassets */; };
 		18BB96F51F67FE1900AE9FF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BB96F31F67FE1900AE9FF3 /* LaunchScreen.storyboard */; };
 		18BB97001F67FE1900AE9FF3 /* SnapgramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB96FF1F67FE1900AE9FF3 /* SnapgramTests.swift */; };
+		18BB970C1F68004B00AE9FF3 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BB970B1F68004B00AE9FF3 /* Feed.storyboard */; };
 		4F6DCE73FCF94FB82E1E451D /* Pods_SnapgramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EFCAC1B2428B4065F6E6C3F /* Pods_SnapgramTests.framework */; };
 		D838C552DCB8CA87743AEFF4 /* Pods_Snapgram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39C874793808517245DCA658 /* Pods_Snapgram.framework */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,7 @@
 		18BB96FB1F67FE1900AE9FF3 /* SnapgramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapgramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18BB96FF1F67FE1900AE9FF3 /* SnapgramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapgramTests.swift; sourceTree = "<group>"; };
 		18BB97011F67FE1900AE9FF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18BB970B1F68004B00AE9FF3 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		39C874793808517245DCA658 /* Pods_Snapgram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snapgram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42647E4173D0555C8E1B0C97 /* Pods-Snapgram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapgram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Snapgram/Pods-Snapgram.debug.xcconfig"; sourceTree = "<group>"; };
 		7EFCAC1B2428B4065F6E6C3F /* Pods_SnapgramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapgramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,7 +93,7 @@
 			children = (
 				18BB96EA1F67FE1900AE9FF3 /* AppDelegate.swift */,
 				18BB96EC1F67FE1900AE9FF3 /* ViewController.swift */,
-				18BB96EE1F67FE1900AE9FF3 /* Main.storyboard */,
+				18BB970A1F68003100AE9FF3 /* Storyboards */,
 				18BB96F11F67FE1900AE9FF3 /* Assets.xcassets */,
 				18BB96F31F67FE1900AE9FF3 /* LaunchScreen.storyboard */,
 				18BB96F61F67FE1900AE9FF3 /* Info.plist */,
@@ -106,6 +108,15 @@
 				18BB97011F67FE1900AE9FF3 /* Info.plist */,
 			);
 			path = SnapgramTests;
+			sourceTree = "<group>";
+		};
+		18BB970A1F68003100AE9FF3 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				18BB96EE1F67FE1900AE9FF3 /* Main.storyboard */,
+				18BB970B1F68004B00AE9FF3 /* Feed.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		48DB796AB925FF0CE4683643 /* Pods */ = {
@@ -217,6 +228,7 @@
 			files = (
 				18BB96F51F67FE1900AE9FF3 /* LaunchScreen.storyboard in Resources */,
 				18BB96F21F67FE1900AE9FF3 /* Assets.xcassets in Resources */,
+				18BB970C1F68004B00AE9FF3 /* Feed.storyboard in Resources */,
 				18BB96F01F67FE1900AE9FF3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
