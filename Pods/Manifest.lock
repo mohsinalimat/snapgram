@@ -1,15 +1,38 @@
 PODS:
   - Nimble (7.0.1)
   - Quick (1.1.0)
+  - ReactiveCocoa (6.0.0):
+    - ReactiveSwift (~> 2.0)
+  - ReactiveSwift (2.0.0):
+    - Result (~> 3.2)
+  - Result (3.2.3)
+  - SnapKit (3.2.0)
 
 DEPENDENCIES:
   - Nimble
   - Quick
+  - ReactiveCocoa (~> 6.0)
+  - ReactiveSwift (~> 2.0)
+  - SnapKit (from `https://github.com/SnapKit/SnapKit.git`, branch `swift-4`)
+
+EXTERNAL SOURCES:
+  SnapKit:
+    :branch: swift-4
+    :git: https://github.com/SnapKit/SnapKit.git
+
+CHECKOUT OPTIONS:
+  SnapKit:
+    :commit: d31148f449abe819fd1a58d5e07e94874c7e6003
+    :git: https://github.com/SnapKit/SnapKit.git
 
 SPEC CHECKSUMS:
   Nimble: 657d000e11df8aebe27cdaf9d244de7f30ed87f7
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
+  ReactiveCocoa: ca689e37b6a922f0273918220d735c43368de550
+  ReactiveSwift: 36339167e571774d936482d0f6512f5118a74731
+  Result: 128640a6347e8d2ae48b142556739a2d13f90ce6
+  SnapKit: c71c530b73cedd2a8b998098687001baff265086
 
-PODFILE CHECKSUM: f287c435a4c4ba1fe7f14f32663aba192b332f4e
+PODFILE CHECKSUM: 601ee59fd87a6d2294ae88ec8769465d340e1528
 
 COCOAPODS: 1.2.1
