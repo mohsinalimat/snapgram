@@ -6,7 +6,7 @@ target 'Snapgram' do
   use_frameworks!
 
   # Pods for Snapgram
-  pod 'SnapKit', :git => 'https://github.com/SnapKit/SnapKit.git', :branch => 'swift-4'
+  pod 'SnapKit'
   pod 'ReactiveSwift', '~> 2.0'
   pod 'ReactiveCocoa', '~> 6.0'
 
@@ -15,6 +15,14 @@ target 'Snapgram' do
     # Pods for testing
     pod 'Quick'
     pod 'Nimble'
+  end
+
+  post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['SWIFT_VERSION'] = '3.0'
+        end
+    end
   end
 
 end
