@@ -1,1 +1,3 @@
 language: objectice-c
+xcode_workspace: Snapgram.workspace
+xcode_scheme: Snapgram
