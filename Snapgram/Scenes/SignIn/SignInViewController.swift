@@ -8,22 +8,50 @@
 
 import UIKit
 import SnapKit
+import RxSwift
+import RxCocoa
 
 final class SignInViewController: UIViewController {
+
+    private let viewModel: SignInViewModelType = SignInViewModel(authService: FirebaseAuthService())
+    private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        bindViewModel()
     }
 
-    // MARK: - UI Components
+    private func bindViewModel() {
+        viewModel.output.isFormValid.bind(to: signInButton.rx.isEnabled).disposed(by: disposeBag)
+    }
+
+    @objc private func signInTapped(_ sender: UIButton) {
+        viewModel.input.signInTapped()
+    }
+
+    @objc private func emailTextFieldChanged(_ textField: UITextField) {
+        viewModel.input.emailChanged(textField.text)
+    }
+
+    @objc private func passwordTextFieldChanged(_ textField: UITextField) {
+        viewModel.input.passwordChanged(textField.text)
+    }
+
+    // MARK: - UI
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
+    // MARK: UI Components
+    fileprivate lazy var containerView: UIView = UIView()
     fileprivate lazy var logoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .gray
         return imageView
     }()
 
-    fileprivate lazy var containerView: UIView = {
+    fileprivate lazy var fieldsContainerView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
         view.layer.masksToBounds = true
@@ -41,6 +69,7 @@ final class SignInViewController: UIViewController {
         let textField = UITextField()
         textField.placeholder = "Email"
         textField.keyboardType = .emailAddress
+        textField.tintColor = UIColor.rgba(1, 22, 39)
         return textField
     }()
 
@@ -48,12 +77,27 @@ final class SignInViewController: UIViewController {
         let textField = UITextField()
         textField.placeholder = "Password"
         textField.isSecureTextEntry = true
+        textField.tintColor = UIColor.rgba(1, 22, 39)
         return textField
     }()
 
     fileprivate lazy var signInButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Sign In", for: .normal)
+        button.addTarget(self, action: #selector(signInTapped(_:)), for: .touchUpInside)
+        return button
+    }()
+
+    fileprivate lazy var createAccountLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Don't have an account?"
+        label.textColor = .white
+        return label
+    }()
+
+    fileprivate lazy var createAccountButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Create account", for: .normal)
         return button
     }()
 
@@ -62,27 +106,36 @@ final class SignInViewController: UIViewController {
 // MARK: - UI Configuration
 extension SignInViewController: ViewConfigurator {
     func buildViewHierarchy() {
-        view.addSubview(logoImageView)
         view.addSubview(containerView)
-        containerView.addSubview(emailTextField)
-        containerView.addSubview(separatorView)
-        containerView.addSubview(passwordTextField)
-        view.addSubview(signInButton)
+        containerView.addSubview(logoImageView)
+        containerView.addSubview(fieldsContainerView)
+        fieldsContainerView.addSubview(emailTextField)
+        fieldsContainerView.addSubview(separatorView)
+        fieldsContainerView.addSubview(passwordTextField)
+        containerView.addSubview(signInButton)
+        containerView.addSubview(createAccountLabel)
+        containerView.addSubview(createAccountButton)
     }
 
     func setupConstraints() {
+        containerView.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(topLayoutGuide.snp.bottom).offset(12)
+            make.bottom.equalToSuperview().offset(-12)
+            make.right.greaterThanOrEqualToSuperview().offset(-12).priority(999)
+            make.left.greaterThanOrEqualToSuperview().offset(12).priority(999)
+            make.width.lessThanOrEqualTo(400)
+        }
         logoImageView.snp.makeConstraints { (make) in
-            make.bottom.equalTo(containerView.snp.top).offset(-48)
-            make.width.equalTo(containerView)
+            make.bottom.equalTo(fieldsContainerView.snp.top).offset(-48)
+            make.width.equalToSuperview()
             make.height.equalTo(128) // test
             make.centerX.equalToSuperview()
         }
 
-        containerView.snp.makeConstraints { (make) in
+        fieldsContainerView.snp.makeConstraints { (make) in
             make.center.equalToSuperview()
-            make.right.greaterThanOrEqualToSuperview().offset(-12).priority(999)
-            make.left.greaterThanOrEqualToSuperview().offset(12).priority(999)
-            make.width.lessThanOrEqualTo(400)
+            make.width.equalToSuperview()
         }
 
         emailTextField.snp.makeConstraints { (make) in
@@ -108,12 +161,23 @@ extension SignInViewController: ViewConfigurator {
         }
 
         signInButton.snp.makeConstraints { (make) in
-            make.top.equalTo(containerView.snp.bottom).offset(12)
+            make.top.equalTo(fieldsContainerView.snp.bottom).offset(12)
             make.centerX.equalToSuperview()
+        }
+
+        createAccountLabel.snp.makeConstraints { (make) in
+            make.left.equalToSuperview()
+            make.centerY.equalTo(createAccountButton)
+        }
+
+        createAccountButton.snp.makeConstraints { (make) in
+            make.right.equalToSuperview()
+            make.bottom.equalToSuperview()
         }
     }
 
     func configureView() {
-        view.backgroundColor = .lightGray
+        view.tintColor = .white
+        view.backgroundColor = UIColor.rgba(1, 22, 39)
     }
 }

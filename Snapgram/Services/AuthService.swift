@@ -7,12 +7,14 @@
 //
 
 import Foundation
-import ReactiveSwift
+import RxSwift
+import FirebaseAuth
 
 enum AuthError: Error {
     case custom(String)
+    case invalidCredentials
 }
 
 protocol AuthServiceProvider {
-    func signIn(email: String, password: String) -> Signal<User?, AuthError>
+    func signIn(email: String, password: String) -> Observable<User>
 }

@@ -7,12 +7,18 @@ target 'Snapgram' do
 
   # Pods for Snapgram
   pod 'SnapKit'
-  pod 'ReactiveSwift', '~> 2.0'
-  pod 'ReactiveCocoa', '~> 6.0'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
+  pod 'Marshal'
 
   target 'SnapgramTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Firebase'
     pod 'Quick'
     pod 'Nimble'
   end
