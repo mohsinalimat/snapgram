@@ -7,12 +7,28 @@ target 'Snapgram' do
 
   # Pods for Snapgram
   pod 'SnapKit'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
+  pod 'Marshal'
 
   target 'SnapgramTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Firebase'
     pod 'Quick'
     pod 'Nimble'
+  end
+
+  post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['SWIFT_VERSION'] = '3.0'
+        end
+    end
   end
 
 end
